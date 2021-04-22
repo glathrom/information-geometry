@@ -1,9 +1,14 @@
-\begin{thebibliography}{Bha14}
+\begin{thebibliography}{MWS90}
 
 \bibitem[Bha14]{pizza}
 A.~Bhatia.
 \newblock How a 19th century math genius taught us the best way to hold a pizza
   slice, Sept. 5, 2014.
 \newblock [Online; accessed September-2017 ].
+
+\bibitem[MWS90]{wackerly}
+W.~Mendenall, D.~Wackerly, and R.~Scheaffer.
+\newblock {\em Mathematical Statistics with Applications}.
+\newblock PWS-Kent Publishing, 4th edition, 1990.
 
 \end{thebibliography}
