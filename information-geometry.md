@@ -13,7 +13,9 @@ This is a test.
 
 [@pizza]
 
-$$\tensor{\Gamma}{^{ij}_{k}} = \cdots$$
+```math
+\tensor{\Gamma}{^{ij}_{k}} = \cdots
+```
 
 Probability
 ===========
