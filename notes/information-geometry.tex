@@ -57,6 +57,14 @@ We begin with the connection between Information Geometry and Mechanics using \c
 \section{Mechanics}
 
 Suppose we have a manifold $Q$ with local coordinates $(q^1,q^2,\ldots,q^n)$.
+That is, $Q$ is a collection of charts, $\left\{ U_\alpha \right\}$, which is an open cover of $Q$.  
+For each chart $U_\alpha$ we have a diffeomorphism 
+\begin{equation*}
+    \phi_\alpha:U_\alpha \ra \phi_\alpha(U_\alpha) \subseteq \bb R^n, 
+\end{equation*}
+where, together with the natural projection functions from the product space $\bb R^n$ onto the individual coordinates, $\pi^i :\bb R^n \ra \bb R$,  we obtain the coordinate functions $q^i = \pi^i \circ \phi_\alpha$.
+This gives rise to what we have referred to as the local coordinates above for the chart $U_\alpha$.  
+A \textbf{Lagrangian} is simply a function from the tangent bundle into the real numbers, $L:TQ \ra \bb R$.
 
 
 \bibliography{thebibliography}
