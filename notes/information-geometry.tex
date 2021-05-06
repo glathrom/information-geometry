@@ -7,7 +7,7 @@
 \usepackage{wasysym}
 \usepackage{tensor}
 \usepackage{hyperref}
-
+\usepackage{tikz-cd}
 \newcommand{\lspan}{\operatorname{span}}
 \newcommand{\Ob}{\operatorname{Ob}}
 \newcommand{\id}{\operatorname{id}}
@@ -44,27 +44,65 @@
 
 \section{Background}
 
-Information Geometry is a area which combines Differential Geometry, Probability Theory and Information Theory into one discipline.  
-Because of this, it is somewhat difficult to get a grasp on all of the concepts which go into Information Theory.  
-By molding these three disciplines together we also see connections between Physics and Machine Learning also with implications for Artificial Intelligence.
-Let's just see where all of these things take us, while supplementing necessary background along the way.
-One of the books of interest will be \cite{dodson} along with a collection of papers available \href{https://mega.nz/folder/5w0CDDzR\#EUMxMbyRJdNSKsqKIuEyFg}{here}.
-We begin with the connection between Information Geometry and Mechanics using \cite{leok1} as the guide.
-\begin{equation*}
-    \tensor{\Gamma}{^{ij}_{k}} = \cdots
-\end{equation*}
+Information Geometry is a area which combines Differential Geometry,
+Probability Theory and Information Theory into one discipline.  Because of
+this, it is somewhat difficult to get a grasp on all of the concepts which go
+into Information Theory.  By molding these three disciplines together we also
+see connections between Physics and Machine Learning also with implications
+for Artificial Intelligence.  Let's just see where all of these things take
+us, while supplementing necessary background along the way.  One of the books
+of interest will be \cite{dodson} along with a collection of papers available
+\href{https://mega.nz/folder/5w0CDDzR\#EUMxMbyRJdNSKsqKIuEyFg}{here}.  We begin
+with the connection between Information Geometry and Mechanics using
+\cite{leok1} as the guide.  \begin{equation*} \tensor{\Gamma}{^{ij}_{k}} =
+    \cdots \end{equation*}
 
 \section{Mechanics}
 
 Suppose we have a manifold $Q$ with local coordinates $(q^1,q^2,\ldots,q^n)$.
-That is, $Q$ is a collection of charts, $\left\{ U_\alpha \right\}$, which is an open cover of $Q$.  
-For each chart $U_\alpha$ we have a diffeomorphism 
+That is, $Q$ is a collection of charts, $\left\{ U_\alpha \right\}$, which is an
+open cover of $Q$.  For each chart $U_\alpha$ we have a diffeomorphism
+\begin{equation*} \phi_\alpha:U_\alpha \ra \phi_\alpha(U_\alpha) \subseteq \bb
+    R^n, \end{equation*} where, together with the natural projection functions
+    from the product space $\bb R^n$ onto the individual coordinates, $\pi^i
+    :\bb R^n \ra \bb R$,  we obtain the coordinate functions $q^i = \pi^i \circ
+    \phi_\alpha$.  This gives rise to what we have referred to as the local
+    coordinates above for the chart $U_\alpha$.  A \textbf{Lagrangian} is simply
+    a function from the tangent bundle into the real numbers, $L:TQ \ra \bb R$.
+
+\section{Cohomology}
+
+Beginning the discussion of Cohomology we have the notion of a singular chain
+complex.  
+\begin{equation*} 
+    \begin{tikzcd} 
+        \cdots \ar[r] & C_{i+1} \ar[r,"\partial_{i+1}"] & C_i 
+        \ar[r, "\partial_i"] & C_{i-1} \ar[r] & \cdots
+    \end{tikzcd} 
+\end{equation*} 
+If we take vectors $u_0, u_1, \ldots, u_n \in \bb R^n$ which are affinely independent, 
+that is $\left\{ u_i-u_0 \right\}_{i=1}^n$ are linearly independent, 
+then the simplex is the set 
+\begin{equation*} 
+    C^n = \left\{  p^0u_0+p^1u_1+\cdots+p^nu_n ~\biggr |~ p^i \geq 0 \textup{ for all
+    } i \textup{ and } \sum_{i} p^i = 1 \right\}.  
+\end{equation*} 
+One could also recognize the $n$ dimensional probability simplex, or the set of all
+finite probability distributions on $n$ elements, as 
 \begin{equation*}
-    \phi_\alpha:U_\alpha \ra \phi_\alpha(U_\alpha) \subseteq \bb R^n, 
-\end{equation*}
-where, together with the natural projection functions from the product space $\bb R^n$ onto the individual coordinates, $\pi^i :\bb R^n \ra \bb R$,  we obtain the coordinate functions $q^i = \pi^i \circ \phi_\alpha$.
-This gives rise to what we have referred to as the local coordinates above for the chart $U_\alpha$.  
-A \textbf{Lagrangian} is simply a function from the tangent bundle into the real numbers, $L:TQ \ra \bb R$.
+    \Delta^n = \left\{ \mb p \in \bb R^n ~\biggr |~ p^i \geq 0 \textup{ for } 
+    i=0,1,\ldots,{n-1} \textup{ and } \sum_i p^i = 1 \right\}
+\end{equation*} 
+so that the simplex, $C^n$ may be recognized as the set of all possible expected-values 
+with respect to the probability distributions
+\begin{equation*} 
+    C^n = \left\{ E[U|\mb p] = \braket{U}_{\mb p} ~|~ \mb p
+        \in \Delta^{n+1}\right\} 
+\end{equation*} 
+where $U$ is a random variable on the set $\left\{ u_0, u_1, \ldots, u_n \right\}$ 
+where $\prob(U=u_i ~|~ \mb p) = p^i$.
+
+
 
 
 \bibliography{thebibliography}
