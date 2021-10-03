@@ -1,46 +1,48 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: information-geometry.aux
 The style file: alpha.bst
 Database file #1: thebibliography.bib
-You've used 2 entries,
+Warning--I didn't find a database entry for "leok1"
+You've used 1 entry,
             2543 wiz_defined-function locations,
-            569 strings with 4661 characters,
-and the built_in function-call counts, 687 in all, are:
-= -- 65
-> -- 38
+            565 strings with 4573 characters,
+and the built_in function-call counts, 364 in all, are:
+= -- 33
+> -- 19
 < -- 0
-+ -- 12
-- -- 12
-* -- 41
-:= -- 132
-add.period$ -- 7
-call.type$ -- 2
-change.case$ -- 11
-chr.to.int$ -- 2
-cite$ -- 2
-duplicate$ -- 28
-empty$ -- 46
-format.name$ -- 14
-if$ -- 135
++ -- 6
+- -- 6
+* -- 22
+:= -- 72
+add.period$ -- 4
+call.type$ -- 1
+change.case$ -- 5
+chr.to.int$ -- 1
+cite$ -- 1
+duplicate$ -- 15
+empty$ -- 26
+format.name$ -- 7
+if$ -- 72
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 3
-newline$ -- 13
-num.names$ -- 6
-pop$ -- 12
+missing$ -- 2
+newline$ -- 8
+num.names$ -- 3
+pop$ -- 7
 preamble$ -- 1
-purify$ -- 14
+purify$ -- 7
 quote$ -- 0
-skip$ -- 25
+skip$ -- 13
 stack$ -- 0
-substring$ -- 14
-swap$ -- 2
+substring$ -- 7
+swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 4
 warning$ -- 0
-while$ -- 6
-width$ -- 4
-write$ -- 27
+while$ -- 3
+width$ -- 2
+write$ -- 15
+(There was 1 warning)

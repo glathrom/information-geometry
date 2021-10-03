@@ -1,0 +1,33 @@
+
+\section{Cohomology}
+
+Beginning the discussion of Cohomology we have the notion of a singular chain
+complex.  
+\begin{equation*} 
+    \begin{tikzcd} 
+        \cdots \ar[r] & C_{i+1} \ar[r,"\partial_{i+1}"] & C_i 
+        \ar[r, "\partial_i"] & C_{i-1} \ar[r] & \cdots
+    \end{tikzcd} 
+\end{equation*} 
+If we take vectors $u_0, u_1, \ldots, u_n \in \bb R^n$ which are affinely independent, 
+that is $\left\{ u_i-u_0 \right\}_{i=1}^n$ are linearly independent, 
+then the simplex is the set 
+\begin{equation*} 
+    C^n = \left\{  p^0u_0+p^1u_1+\cdots+p^nu_n ~\biggr |~ p^i \geq 0 \textup{ for all
+    } i \textup{ and } \sum_{i} p^i = 1 \right\}.  
+\end{equation*} 
+One could also recognize the $n$ dimensional probability simplex, or the set of all
+finite probability distributions on $n$ elements, as 
+\begin{equation*}
+    \Delta^n = \left\{ \mb p \in \bb R^n ~\biggr |~ p^i \geq 0 \textup{ for } 
+    i=0,1,\ldots,{n-1} \textup{ and } \sum_i p^i = 1 \right\}
+\end{equation*} 
+so that the simplex, $C^n$ may be recognized as the set of all possible expected-values 
+with respect to the probability distributions
+\begin{equation*} 
+    C^n = \left\{ E[U|\mb p] = \braket{U}_{\mb p} ~|~ \mb p
+        \in \Delta^{n+1}\right\} 
+\end{equation*} 
+where $U$ is a random variable on the set $\left\{ u_0, u_1, \ldots, u_n \right\}$ 
+where $\prob(U=u_i ~|~ \mb p) = p^i$.
+

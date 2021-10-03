@@ -1,0 +1,43 @@
+\section{Parallel Transport}
+
+Suppose we are given a manifold $M$ with a coordinate chart
+\begin{equation*}
+    x:U \subseteq \mathbb{R}^n \ra M.
+\end{equation*}
+The tangent space at a point $p \in M$ is a vector spanned by the vectors
+\begin{equation*}
+    \partial_i = \dfrac{\partial x}{\partial u^i}\biggl\lvert_p
+\end{equation*}
+or the column space of the Jacobian matrix, $J$,  evaluated at the point $p$, denoted $T_p(M)$.
+
+We have $n$ of the vectors $\pd_i$ which may live in some unknown dimensional vector space in which the manifold is embedded.
+In order to simplify things we define a metric tensor $g = J^tJ$ which gives a linear transformation 
+\begin{equation*}
+    g:T_p(M) \times T_p(M) \ra \mb R.
+\end{equation*}
+This means that our metric tensor can actually be viewed as an element 
+\begin{equation*}
+    g = g_{ij} dx^i\otimes dx^j \in T^\ast_p(M) \otimes T^\ast_p(M).
+\end{equation*}
+For tangent vectors $v^k\pd_k$ and $w^l\pd_l$ we have
+\begin{align*}
+    g(v,w) &= g_{ij}dx^i\otimes dx^j(v^k\pd_k, w^l\pd_l) \\
+    &= g_{ij}v^kw^ldx^i(\pd_k)dx^j(\pd_l) \\
+    &= g_{ij}v^kw^l \delta^i_k\delta^j_l\\
+    &= g_{ij}v^iw^j = \inner{v|w}_g.
+\end{align*}
+
+Because each tangent space is attached at a point to the manifold, there is no natural way to move a vector from one tangent space to another.
+The mechanism which does this is found in a natural way and is called a \textbf{parallel transport}.
+
+If we are in the space $\mb R^m$ then we simply move the tangent vector from the point $p$ to the point $q$.
+The problem with this is that the tangent space, has moved as we have gone from one point to another.
+Therefore, what we need in order to move one tangent space to another is a projection onto the tangent space at $q$.
+This will give us a linear map $T_p(M) \ra T_q(M)$.  
+\begin{defn}
+    A linear operator $P:V \ra V$ is a \textbf{projection} if $P^2 = P$.  
+\end{defn}
+If $M$ were an $n$-sphere, then for any point $p = (p^1,p^2,\ldots,p^n)$ then the point diametrically opposed to $p$, say $q = (-p^1,-p^2,\ldots,-p^n)$ will have parallel tangent spaces.
+
+If a tangent vector happens to be in both tangent spaces, then we would want the image under the projection to be the identity map.
+
